@@ -4,20 +4,21 @@ import { terser } from 'rollup-plugin-terser';
 import { babel } from '@rollup/plugin-babel';
 import { DEFAULT_EXTENSIONS } from '@babel/core';
 import typescript from 'rollup-plugin-typescript2';
+import eslint from '@rollup/plugin-eslint';
 
 export default {
   input: 'src/index.ts',
   plugins: [
     nodeResolve(),
     commonjs(),
+    eslint({
+      fix: true,
+      throwOnError: true,
+    }),
     typescript(),
     babel({
       babelHelpers: 'bundled',
-      extensions: [
-        ...DEFAULT_EXTENSIONS,
-        '.ts',
-        '.tsx',
-      ],
+      extensions: [...DEFAULT_EXTENSIONS, '.ts', '.tsx'],
     }),
   ],
   output: [
@@ -33,7 +34,7 @@ export default {
       name: 'myLibrary',
       file: 'dist/bundle.umd.js',
       format: 'umd',
-      plugins: [ terser() ],
+      plugins: [terser()],
     },
   ],
 };
