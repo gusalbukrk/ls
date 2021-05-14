@@ -4,12 +4,12 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: ['airbnb-base', 'prettier'],
+  extends: ['airbnb-base', 'prettier', 'plugin:jest/all'],
   parserOptions: {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['prettier'],
+  plugins: ['prettier', 'jest'],
   rules: {
     'prettier/prettier': 'error',
   },
@@ -45,15 +45,15 @@ module.exports = {
         'import/extensions': ['error', 'never'],
 
         // fix 'no-extraneous-dependencies' error in test files
-        // 'import/no-extraneous-dependencies': [
-        //   'error',
-        //   {
-        //     devDependencies: [
-        //       '**/__tests__/**',
-        //       '**/*{.,_}{test,spec}.{ts,tsx}',
-        //     ],
-        //   },
-        // ],
+        'import/no-extraneous-dependencies': [
+          'error',
+          {
+            devDependencies: [
+              '**/__tests__/**',
+              '**/*{.,_}{test,spec}.{ts,tsx}',
+            ],
+          },
+        ],
       },
     },
   ],
