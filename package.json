@@ -13,6 +13,7 @@
     "import": "./dist/bundle.esm.js",
     "require": "./dist/bundle.cjs.js"
   },
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/gusalbukrk/ls.git"
@@ -48,6 +49,8 @@
     "jest-runner-eslint": "^0.10.0",
     "lint-staged": "^11.0.0",
     "prettier": "^2.3.0",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-dts": "^3.0.2",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.30.0",
     "tslib": "^2.2.0",
