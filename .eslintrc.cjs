@@ -12,6 +12,24 @@ module.exports = {
   plugins: ['prettier', 'jest'],
   rules: {
     'prettier/prettier': 'error',
+    'import/order': [
+      'error',
+      {
+        alphabetize: { order: 'asc' },
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          'unknown',
+          'parent',
+          'sibling',
+          'index',
+          'object',
+          'type',
+        ],
+        'newlines-between': 'always',
+      },
+    ],
   },
   settings: {
     // fix 'import/no-unresolved' error
