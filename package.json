@@ -20,11 +20,11 @@
   },
   "scripts": {
     "build": "rollup -c",
-    "build:watch": "rollup -cw",
+    "build:watch": "npm run build -- -w",
+    "lint": "eslint src",
     "prepublishOnly": "npm run build",
-    "prepare": "husky install",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "npm test -- --watch"
   },
   "devDependencies": {
     "@babel/core": "^7.14.0",
