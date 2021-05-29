@@ -60,7 +60,7 @@ module.exports = {
         '@typescript-eslint/no-unused-vars': ['error'],
 
         // fix 'import/extensions' error
-        'import/extensions': ['error', 'never'],
+        'import/extensions': ['error', 'never', { json: 'always' }],
 
         // fix 'no-extraneous-dependencies' error in test files
         'import/no-extraneous-dependencies': [
