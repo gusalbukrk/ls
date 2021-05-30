@@ -23,6 +23,7 @@
     "build:watch": "npm run build -- -w",
     "lint": "eslint src",
     "prepublishOnly": "npm run build",
+    "prepare": "husky install",
     "test": "jest",
     "test:watch": "npm test -- --watch"
   },
