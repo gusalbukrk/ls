@@ -1,12 +1,13 @@
-import { nodeResolve } from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
-import { terser } from 'rollup-plugin-terser';
-import { babel } from '@rollup/plugin-babel';
 import { DEFAULT_EXTENSIONS } from '@babel/core';
-import typescript from 'rollup-plugin-typescript2';
+import { babel } from '@rollup/plugin-babel';
+import commonjs from '@rollup/plugin-commonjs';
 import eslint from '@rollup/plugin-eslint';
-import dts from 'rollup-plugin-dts';
+import json from '@rollup/plugin-json';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
 import del from 'rollup-plugin-delete';
+import dts from 'rollup-plugin-dts';
+import { terser } from 'rollup-plugin-terser';
+import typescript from 'rollup-plugin-typescript2';
 
 export default [
   {
@@ -21,6 +22,9 @@ export default [
       eslint({
         fix: true,
         throwOnError: true,
+      }),
+      json({
+        compact: true,
       }),
       typescript({
         useTsconfigDeclarationDir: true,
