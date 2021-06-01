@@ -22,6 +22,7 @@
     "build": "rollup -c",
     "build:watch": "npm run build -- -w",
     "lint": "eslint src",
+    "lint:config": "eslint . --fix --ext .js,.cjs,.ts,.json --ignore-pattern '!.*' --ignore-pattern '*/*'",
     "prepublishOnly": "npm run build",
     "prepare": "husky install",
     "test": "jest",
