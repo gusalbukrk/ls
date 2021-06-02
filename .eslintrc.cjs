@@ -17,6 +17,8 @@ module.exports = {
   plugins: ['prettier', 'jest'],
   rules: {
     'prettier/prettier': 'error',
+    'json/*': ['error', 'allowComments'],
+
     'import/order': [
       'error',
       {
