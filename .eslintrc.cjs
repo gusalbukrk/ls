@@ -9,12 +9,13 @@ module.exports = {
     'prettier',
     'plugin:jest/all',
     'plugin:json/recommended',
+    'plugin:promise/recommended',
   ],
   parserOptions: {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['prettier', 'jest'],
+  plugins: ['prettier', 'jest', 'promise'],
   rules: {
     'prettier/prettier': 'error',
     'json/*': ['error', 'allowComments'],
