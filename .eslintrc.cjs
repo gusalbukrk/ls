@@ -10,6 +10,7 @@ module.exports = {
     'plugin:jest/all',
     'plugin:json/recommended',
     'plugin:promise/recommended',
+    'plugin:node/recommended',
   ],
   parserOptions: {
     ecmaVersion: 12,
@@ -45,6 +46,11 @@ module.exports = {
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       },
+    },
+
+    // plugin-wide config for eslint-plugin-node
+    'node': {
+      'tryExtensions': ['.js', '.jsx', '.ts', '.tsx', '.json'],
     },
   },
   overrides: [
