@@ -49,8 +49,8 @@ module.exports = {
     },
 
     // plugin-wide config for eslint-plugin-node
-    'node': {
-      'tryExtensions': ['.js', '.jsx', '.ts', '.tsx', '.json'],
+    node: {
+      tryExtensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
     },
   },
   overrides: [
