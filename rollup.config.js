@@ -28,6 +28,7 @@ export default [
       }),
       typescript({
         useTsconfigDeclarationDir: true,
+        clean: true,
       }),
       babel({
         babelHelpers: 'bundled',
